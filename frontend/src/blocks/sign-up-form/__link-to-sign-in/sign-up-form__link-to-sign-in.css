@@ -1,0 +1,15 @@
+.sign-up-form__link-to-sign-in {
+  margin: 0 auto;
+  padding: 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
+.sign-up-form__link-to-sign-in:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.5s;
+}

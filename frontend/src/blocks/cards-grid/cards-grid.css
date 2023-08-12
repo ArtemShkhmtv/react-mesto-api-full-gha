@@ -1,0 +1,19 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 17px;
+}
+
+@media screen and (max-width: 1279px) {
+  .cards-grid {
+    padding: 0 19px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cards-grid {
+    row-gap: 18px;
+  }
+}

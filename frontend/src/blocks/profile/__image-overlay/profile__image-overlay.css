@@ -1,0 +1,11 @@
+.profile__image-overlay {
+  position: relative;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__image-overlay {
+    margin-right: 0;
+  }
+} 
+

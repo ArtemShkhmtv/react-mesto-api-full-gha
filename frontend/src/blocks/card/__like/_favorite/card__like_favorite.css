@@ -1,0 +1,7 @@
+.card__like_favorite {
+  background: url(../../../../images/like-active.svg) no-repeat center;
+}
+
+.card__like_favorite:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,13 @@
+.popup-picture__title {
+  margin: 0;
+  padding: 4px 0 0 0;
+  align-self: flex-start;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #FFFFFF;
+  max-width: 75vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

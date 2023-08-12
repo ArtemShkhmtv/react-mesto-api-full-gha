@@ -1,0 +1,16 @@
+.sign-in-form__input {
+  margin: 30px 0 0 0;
+  padding: 0 0 10px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgba(204, 204, 204, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: rgba(255, 255, 255, 1);
+  background-color: black;
+}
+
+.sign-in-form__input::placeholder {
+  color: rgba(204, 204, 204, 1);
+}

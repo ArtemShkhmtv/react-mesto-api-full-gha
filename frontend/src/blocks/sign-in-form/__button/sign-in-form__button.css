@@ -1,0 +1,15 @@
+.sign-in-form__button {
+  margin: 216px 0 15px 0;
+  height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.21;
+  border-radius: 2px;
+  border: none;
+}
+
+.sign-in-form__button:hover {
+  cursor: pointer;
+  opacity: 0.85;
+  transition: 0.5s;
+}

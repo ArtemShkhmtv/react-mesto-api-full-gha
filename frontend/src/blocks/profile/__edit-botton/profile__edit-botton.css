@@ -1,0 +1,23 @@
+.profile__edit-botton {
+  display: block;
+  padding: 0;
+  min-width: 24px;
+  min-height: 24px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background: url(../../../images/pen-logo.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.profile__edit-botton:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 425px) {
+  .profile__edit-botton {
+    min-width: 18px;
+    min-height: 18px;
+    background-size: 7.5px;
+  }
+}

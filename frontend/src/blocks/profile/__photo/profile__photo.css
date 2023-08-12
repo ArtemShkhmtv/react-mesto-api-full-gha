@@ -1,0 +1,14 @@
+.profile__photo {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  cursor: url('../../../images/pen-logo.svg'), pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__photo {
+    margin-right: 0;
+    margin-bottom: 26px;
+  }
+}
