@@ -7,6 +7,8 @@ const cors = require('cors');
 const { regEx } = require('./utils/reg-ex');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
+require('dotenv').config();
+
 const {
   createUser,
   login,
@@ -34,6 +36,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(requestLogger); // подключаем логгер запросов
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.post(
   '/signin',

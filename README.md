@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 84.201.132.88
 
-Frontend https://...
+Frontend https://art.nomoreparties.co/
 
-Backend https://...
+Backend https://api.art.nomoreparties.co/
