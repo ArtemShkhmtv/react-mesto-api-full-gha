@@ -8,7 +8,7 @@ const enableValidationConfig = {
 };
 
 const dataApi = {
-  baseUrl: "https://art.nomoreparties.co",
+  baseUrl: "https://api.art.nomoreparties.co",
   headers: {
     authorization: "45c93e87-687a-47b8-9789-47f64a5cc7e6",
     "Content-Type": "application/json",
@@ -16,7 +16,7 @@ const dataApi = {
 };
 
 const dataAuthApi = {
-  baseUrl: "https://art.nomoreparties.co",
+  baseUrl: "https://api.art.nomoreparties.co",
   headers: {
     "Content-Type": "application/json",
   },
