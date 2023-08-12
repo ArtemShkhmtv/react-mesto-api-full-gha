@@ -152,7 +152,6 @@ module.exports.login = (req, res, next) => {
 
 module.exports.logout = (req, res) => {
   if (res.cookie) {
-    console.log('мудила');
     res.clearCookie('jwt').status(OK_STATUS_CODE).send({ message: 'Вы вышли из аккаунта' });
   }
 };
