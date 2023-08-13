@@ -147,7 +147,7 @@ function App() {
           if (!data) {
             return;
           }
-          setLoggedIn(true);
+          // setLoggedIn(true);
           navigate("/");
           handleSelectedEmail(data.email);
         })
