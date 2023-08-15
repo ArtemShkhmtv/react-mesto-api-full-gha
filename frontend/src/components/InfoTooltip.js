@@ -1,8 +1,8 @@
 import doneLogo from "../images/Done.svg";
 import warningLogo from "../images/warning.svg";
 
-function InfoTooltip({ isOpen, onClose, isLoggedIn }) {
-  return isLoggedIn ? (
+function InfoTooltip({ isOpen, onClose, isRegIn }) {
+  return isRegIn ? (
     <div className={`popup ${isOpen && "popup_opened"} `}>
       <div className="popup__wrapper">
         <button

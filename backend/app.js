@@ -26,7 +26,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3001',
-    'https://art.nomoreparties.co/',
+    'https://art.nomoreparties.co',
   ],
   credentials: true,
 }));

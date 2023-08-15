@@ -29,6 +29,8 @@ function App() {
 
   const [isLoggedIn, setLoggedIn] = React.useState(false);
 
+  const [isRegIn, setRegIn] = React.useState(false);
+
   // стейт текущего пользователя
   const [currentUser, setCurrentUser] = React.useState({});
 
@@ -49,18 +51,19 @@ function App() {
   // стейт карточек
   const [cards, setCards] = React.useState([]);
 
-  React.useEffect(() => {
-    async function getServerCards() {
-      try {
-        const cardsArray = await api.getCards();
-        setCards(cardsArray.reverse());
-        return cardsArray;
-      } catch (error) {
-        console.error(error);
-      }
+  async function getServerCards() {
+    try {
+      const cardsArray = await api.getCards();
+      setCards(cardsArray.reverse());
+      return cardsArray;
+    } catch (error) {
+      console.error(error);
     }
+  }
+
+  React.useEffect(() => {
     getServerCards();
-  }, []);
+  }, [isLoggedIn]);
 
   React.useEffect(() => {
     checkToken();
@@ -147,7 +150,7 @@ function App() {
           if (!data) {
             return;
           }
-          // setLoggedIn(true);
+          setLoggedIn(true);
           navigate("/");
           handleSelectedEmail(data.email);
         })
@@ -201,6 +204,10 @@ function App() {
     setLoggedIn(status);
   }
 
+  function handleRegIn(status) {
+    setRegIn(status);
+  }
+
   // колбэк закрытия попапов
   function closeAllPopups() {
     setEditProfilePopupOpen(false);
@@ -244,7 +251,7 @@ function App() {
             element={
               <Register
                 handleRegisterUser={handleInfoTooltipOpen}
-                handleLoggedIn={handleLoggedIn}
+                handleRegIn={handleRegIn}
               />
             }
           />
@@ -256,6 +263,7 @@ function App() {
                 handleLoggedIn={handleLoggedIn}
                 handleSelectedEmail={handleSelectedEmail}
                 handleUserInfo={handleCurrentUser}
+                getCards={getServerCards}
               />
             }
           />
@@ -266,7 +274,7 @@ function App() {
         <InfoTooltip
           isOpen={isInfoTooltipOpen}
           onClose={closeAllPopups}
-          isLoggedIn={isLoggedIn}
+          isRegIn={isRegIn}
         />
         <AddPlacePopup
           isOpen={isAddPlacePopupOpen}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authApi } from "../utils/authApi";
 
-function Register({ handleRegisterUser, handleLoggedIn }) {
+function Register({ handleRegisterUser, handleRegIn }) {
   const [formValue, setFormValue] = React.useState({
     email: "",
     password: "",
@@ -25,11 +25,11 @@ function Register({ handleRegisterUser, handleLoggedIn }) {
       .then(() => {
         navigate("/sign-in");
         handleRegisterUser();
-        handleLoggedIn(true);
+        handleRegIn(true);
       })
       .catch((err) => {
         console.error(err);
-        handleLoggedIn(false);
+        handleRegIn(false);
         handleRegisterUser();
       })
       .finally(() => {});

@@ -25,7 +25,6 @@ function Login({ handleRegisterUser, handleLoggedIn, handleSelectedEmail, handle
       .then((res) => {
         handleLoggedIn(true);
         navigate("/");
-        // localStorage.setItem("jwt", token);
         handleSelectedEmail(formValue.email);
         handleUserInfo(res);
       })
